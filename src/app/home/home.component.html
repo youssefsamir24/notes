@@ -22,7 +22,7 @@
             <div class="modal-body">
                 <form [formGroup]="noteAddForm" (ngSubmit)="addNote(noteAddForm)">
                     <input formControlName="title" class="form-control my-1" type="text" placeholder="title..">
-                    <textarea formControlName="content" class="form-control my-1" placeholder="describtion..." name="describtion" id="describtion" cols="30" rows="5"></textarea>
+                    <textarea formControlName="content" class="form-control my-1" placeholder="describtion..." name="describtion" id="describtionadd" cols="30" rows="5"></textarea>
                     <div class="modal-footer">
                         <button type="submit" class="btn addNoteBtn" data-bs-dismiss="modal">Add</button>
                         <button type="button" class="btn cancelNoteBtn" data-bs-dismiss="modal">Cancel</button>
@@ -60,7 +60,7 @@
                 <div class="modal-body">
                     <form [formGroup]="noteEditForm" (ngSubmit)="editNote(noteEditForm)">
                         <input formControlName="title" class="form-control my-1" type="text" placeholder="title..">
-                        <textarea formControlName="content" class="form-control my-1" placeholder="describtion..." name="describtion" id="describtion" cols="30" rows="5"></textarea>
+                        <textarea formControlName="content" class="form-control my-1" placeholder="describtion..." name="describtion" id="describtionedit" cols="30" rows="5"></textarea>
                         <div class="modal-footer">
                             <button type="submit" class="btn addNoteBtn" data-bs-dismiss="modal">Update</button>
                             <button type="button" class="btn cancelNoteBtn" data-bs-dismiss="modal">Cancel</button>
