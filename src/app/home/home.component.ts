@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
   noteEditForm:FormGroup= new FormGroup({
     title:new FormControl(null),
     content:new FormControl(null)
-  })
+  }) 
+
 
   getNote(){
     this._NoteService.getNotes().subscribe({
@@ -71,9 +72,23 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  deleteNote(){
+    this._NoteService.deleteNotes(this.noteId).subscribe({
+      next:(repso)=>{
+        console.log(repso) 
+        this.getNote();
+      },
+      error:(err)=>{
+        console.log(err)
+        
+      }
+    })
+
+  }
+
   getNoteId(id:string){
     this.noteId = id
-    
+    console.log(this.noteId);
   }
 
 

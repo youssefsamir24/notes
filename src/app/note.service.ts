@@ -26,5 +26,9 @@ export class NoteService {
     return this._HttpClient.put(`https://note-sigma-black.vercel.app/api/v1/notes/${id}`,data,{headers:this.headers})
   }
 
+  deleteNotes(id:string):Observable<any>{
+    return this._HttpClient.delete(`https://note-sigma-black.vercel.app/api/v1/notes/${id}`,{headers:this.headers})
+  }
+
 
 }
